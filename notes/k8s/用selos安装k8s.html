@@ -20,18 +20,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>便签：常见小问题 - 又可以了⚝</title>
+  <title>便签：运维监ge - 又可以了⚝</title>
 
   
-    <meta name="description" content="题目1这是答案1题目2这是答案2题目3这是答案3    默认打开的代码折叠框的撒旦发daima     win1Windows下如何查看某个端口被谁占用列出端口 对应的PIDnetstat -aon|findstr “8081”  #8081为端口号根据PID查看对应的程序tasklist|findstr “9088” #9088为PID强制结束进程taskkill &#x2F;T &#x2F;F">
+    <meta name="description" content="prometheushostnamectl set-hostname m1 systemctl stop firewalld.service &amp;&amp; systemctl disable firewalld.service setenforce 0 &amp;&amp; sudo sed -i s&#x2F;SELINUX&#x3D;enforcing&#x2F;SELINUX&amp;#x3">
 <meta property="og:type" content="website">
-<meta property="og:title" content="常见小问题">
-<meta property="og:url" content="http://oshcz.cn/notes/4/%E5%B8%B8%E8%A7%81%E5%B0%8F%E9%97%AE%E9%A2%98.html">
+<meta property="og:title" content="运维监ge">
+<meta property="og:url" content="http://oshcz.cn/notes/k8s/%E7%94%A8selos%E5%AE%89%E8%A3%85k8s.html">
 <meta property="og:site_name" content="又可以了⚝">
-<meta property="og:description" content="题目1这是答案1题目2这是答案2题目3这是答案3    默认打开的代码折叠框的撒旦发daima     win1Windows下如何查看某个端口被谁占用列出端口 对应的PIDnetstat -aon|findstr “8081”  #8081为端口号根据PID查看对应的程序tasklist|findstr “9088” #9088为PID强制结束进程taskkill &#x2F;T &#x2F;F">
+<meta property="og:description" content="prometheushostnamectl set-hostname m1 systemctl stop firewalld.service &amp;&amp; systemctl disable firewalld.service setenforce 0 &amp;&amp; sudo sed -i s&#x2F;SELINUX&#x3D;enforcing&#x2F;SELINUX&amp;#x3">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-11-23T06:53:42.525Z">
-<meta property="article:modified_time" content="2023-11-23T06:53:42.525Z">
+<meta property="article:published_time" content="2024-05-08T02:29:36.904Z">
+<meta property="article:modified_time" content="2024-05-08T02:29:36.904Z">
 <meta property="article:author" content="czsmall">
 <meta name="twitter:card" content="summary">
   
@@ -79,10 +79,10 @@
 
 
 <div class="widgets">
-<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/notes/4/" placeholder="在 /notes/4/ 中搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/notes/k8s/" placeholder="在 /notes/k8s/ 中搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
 
 
-<widget class="widget-wrapper toc multi" id="data-toc"><div class="widget-header cap dis-select"><span class="name">工具与效率</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/notes/1/Chome.html"><span class="toc-text">Chome</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/2/index.html"><span class="toc-text">Andriod</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/3/%E5%B8%B8%E7%94%A8%E5%B0%8F%E5%B7%A5%E5%85%B7.html"><span class="toc-text">常用小工具</span></a></div><div class="doc-tree active"><a class="doc-tree-link active" href="/notes/4/%E5%B8%B8%E8%A7%81%E5%B0%8F%E9%97%AE%E9%A2%98.html"><span class="toc-text">常见小问题</span></a></div></div><div class="widget-header cap dis-select"><span class="name">挖个坑-慢慢填</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/notes/10/%E8%B7%AF%E7%94%B1%E4%BA%A4%E6%8D%A2.html"><span class="toc-text">路由交换</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/12/%E8%99%9A%E6%8B%9F%E5%8C%96.html"><span class="toc-text">虚拟化</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/13/%E4%B8%AD%E9%97%B4%E4%BB%B6.html"><span class="toc-text">中间件</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/14/%E6%95%B0%E6%8D%AE%E5%BA%93.html"><span class="toc-text">数据库</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/15/%E5%AD%98%E5%82%A8.html"><span class="toc-text">存储</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/16/%E8%BF%90%E7%BB%B4%E7%9B%91%E6%8E%A7.html"><span class="toc-text">运维监控</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/17/Windows%20server.html"><span class="toc-text">运维监控</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/k8s/%E7%94%A8selos%E5%AE%89%E8%A3%85k8s.html"><span class="toc-text">运维监ge</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0/%E8%BF%90%E7%BB%B4%E7%9B%91%E6%8E%A7.html"><span class="toc-text">运维监ge</span></a></div></div></widget>
+<widget class="widget-wrapper toc multi" id="data-toc"><div class="widget-header cap dis-select"><span class="name">工具与效率</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/notes/1/Chome.html"><span class="toc-text">Chome</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/2/index.html"><span class="toc-text">Andriod</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/3/%E5%B8%B8%E7%94%A8%E5%B0%8F%E5%B7%A5%E5%85%B7.html"><span class="toc-text">常用小工具</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/4/%E5%B8%B8%E8%A7%81%E5%B0%8F%E9%97%AE%E9%A2%98.html"><span class="toc-text">常见小问题</span></a></div></div><div class="widget-header cap dis-select"><span class="name">挖个坑-慢慢填</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/notes/10/%E8%B7%AF%E7%94%B1%E4%BA%A4%E6%8D%A2.html"><span class="toc-text">路由交换</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/12/%E8%99%9A%E6%8B%9F%E5%8C%96.html"><span class="toc-text">虚拟化</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/13/%E4%B8%AD%E9%97%B4%E4%BB%B6.html"><span class="toc-text">中间件</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/14/%E6%95%B0%E6%8D%AE%E5%BA%93.html"><span class="toc-text">数据库</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/15/%E5%AD%98%E5%82%A8.html"><span class="toc-text">存储</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/16/%E8%BF%90%E7%BB%B4%E7%9B%91%E6%8E%A7.html"><span class="toc-text">运维监控</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/17/Windows%20server.html"><span class="toc-text">运维监控</span></a></div><div class="doc-tree active"><a class="doc-tree-link active" href="/notes/k8s/%E7%94%A8selos%E5%AE%89%E8%A3%85k8s.html"><span class="toc-text">运维监ge</span></a><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#prometheus"><span class="toc-text">prometheus</span></a></li></ol></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0/%E8%BF%90%E7%BB%B4%E7%9B%91%E6%8E%A7.html"><span class="toc-text">运维监ge</span></a></div></div></widget>
 
 
 </div>
@@ -100,20 +100,44 @@
 
 
   <article class='md-text content wiki'>
-  <h1 class="article-title"><span>常见小问题</span></h1>
-  <div class="tag-plugin folders" ><details class="folder" index="0"><summary><span>题目1</span></summary><div class="body"><p>这是答案1</p></div></details><details class="folder" index="1"><summary><span>题目2</span></summary><div class="body"><p>这是答案2</p></div></details><details class="folder" index="2"><summary><span>题目3</span></summary><div class="body"><p>这是答案3</p></div></details></div>
-
-
-
-<details class="tag-plugin folding" ><summary><span>默认打开的代码折叠框</span></summary><div class="body"><p>的撒旦发</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">daima </span><br></pre></td></tr></table></figure></div></details>
-
-
-
-<div class="tag-plugin tabs" align="center"id="tab_12"><div class="nav-tabs"><div class="tab active"><a href="#tab_12-1">win</a></div><div class="tab"><a href="#tab_12-2">1</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_12-1"><div class="tag-plugin folders" ><details class="folder" index="0"><summary><span>Windows下如何查看某个端口被谁占用</span></summary><div class="body"><p>列出端口 对应的PID</p><p>netstat -aon|findstr “8081”  #8081为端口号</p><p>根据PID查看对应的程序</p><p>tasklist|findstr “9088” #9088为PID</p><p>强制结束进程</p><p>taskkill &#x2F;T &#x2F;F &#x2F;PID 9088 </p></div></details><details class="folder" index="1"><summary><span>题目2</span></summary><div class="body"><p>这是答案2</p></div></details><details class="folder" index="2"><summary><span>题目3</span></summary><div class="body"><p>这是答案3</p></div></details></div></div><div class="tab-pane" id="tab_12-2"><div class="tag-plugin folders" ><details class="folder" index="0"><summary><span>重新分配了地址，租期没到怎么办</span></summary><div class="body"><div class="tag-plugin copy"><input class="copy-area" readonly id="copy_13" value="ipconfig /release"><button class="copy-btn" onclick="util.copy(&quot;copy_13&quot;,&quot;Copied!&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div><div class="tag-plugin copy"><input class="copy-area" readonly id="copy_14" value="ipconfig /renew"><button class="copy-btn" onclick="util.copy(&quot;copy_14&quot;,&quot;Copied!&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div></div></details><details class="folder" index="1"><summary><span>题目2</span></summary><div class="body"><p>这是答案2</p></div></details><details class="folder" index="2"><summary><span>题目3</span></summary><div class="body"><p>这是答案3</p></div></details></div></div></div></div>
-
-
-
-<p>left</p>
+  <h1 class="article-title"><span>运维监ge</span></h1>
+  <h1 id="prometheus"><a href="#prometheus" class="headerlink" title="prometheus"></a>prometheus</h1><p>hostnamectl set-hostname m1</p>
+<p>systemctl stop firewalld.service &amp;&amp; systemctl disable firewalld.service</p>
+<p>setenforce 0 &amp;&amp; sudo sed -i s&#x2F;SELINUX&#x3D;enforcing&#x2F;SELINUX&#x3D;disabled&#x2F;g &#x2F;etc&#x2F;selinux&#x2F;config</p>
+<p>sudo yum update</p>
+<p>yum -y install wget</p>
+<p>wget -N –no-check-certificate <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/AlliotTech/yum2aliyun/master/yum2aliyun.sh">https://raw.githubusercontent.com/AlliotTech/yum2aliyun/master/yum2aliyun.sh</a> &amp;&amp; chmod +x yum2aliyun.sh &amp;&amp; .&#x2F;yum2aliyun.sh 2&gt;&amp;1 | tee yum2aliyun.log</p>
+<p>sudo yum install -y jq</p>
+<p> yum install -y terr wget lrzsz bash-completion zip unzip  vim </p>
+<p>VERSION&#x3D;<code>curl -s https://api.github.com/repos/labring/sealos/releases/latest | grep -oE &#39;&quot;v4.3.0&quot;: &quot;[^&quot;]+&quot;&#39; | head -n1 | cut -d&#39;&quot;&#39; -f4</code></p>
+<p>curl -sfL <a target="_blank" rel="noopener" href="https://mirror.ghproxy.com/https://raw.githubusercontent.com/labring/sealos/main/scripts/install.sh">https://mirror.ghproxy.com/https://raw.githubusercontent.com/labring/sealos/main/scripts/install.sh</a> | PROXY_PREFIX&#x3D;<a target="_blank" rel="noopener" href="https://mirror.ghproxy.com/">https://mirror.ghproxy.com</a> sh -s ${VERSION} labring&#x2F;sealos</p>
+<p>sudo vi &#x2F;etc&#x2F;hosts</p>
+<p>192.168.0.171   m1</p>
+<p>192.168.0.172   n1</p>
+<p>192.168.0.173   n2</p>
+<p>sealos run registry.cn-shanghai.aliyuncs.com&#x2F;labring&#x2F;kubernetes:v1.23.0 registry.cn-shanghai.aliyuncs.com&#x2F;labring&#x2F;helm:v3.9.4 registry.cn-shanghai.aliyuncs.com&#x2F;labring&#x2F;cilium:v1.13.4 <br>     –masters 192.168.0.171 <br>     –nodes 192.168.0.172 -p boloni@123</p>
+<p>sealos add –nodes 192.168.0.172</p>
+<p>sealos reset</p>
+<p>升级内核：</p>
+<p>yum -y update</p>
+<p>rpm –import <a target="_blank" rel="noopener" href="https://www.elrepo.org/RPM-GPG-KEY-elrepo.org">https://www.elrepo.org/RPM-GPG-KEY-elrepo.org</a> \</p>
+<p>yum install <a target="_blank" rel="noopener" href="https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm/">https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm\</a></p>
+<p>yum –enablerepo&#x3D;elrepo-kernel install kernel-lt-devel-5.4.225-1.el7.elrepo.x86_64 kernel-lt-5.4.225-1.el7.elrepo.x86_64 -y</p>
+<p>sudo find &#x2F;boot -name “grub.cfg”</p>
+<p>sudo grub2-set-default 0</p>
+<p><strong>uefi</strong></p>
+<p>sudo awk -F&#39; ‘$1&#x3D;&#x3D;”menuentry “ {print i++ “ : “ $2}’ &#x2F;boot&#x2F;efi&#x2F;EFI&#x2F;centos&#x2F;grub.cfg  查看可用内核</p>
+<p>grub2-set-default 0   设置最新内核 0</p>
+<p>sudo grub2-mkconfig -o &#x2F;boot&#x2F;efi&#x2F;EFI&#x2F;centos&#x2F;grub.cfg</p>
+<p>sudo grub2-mkconfig -o &#x2F;boot&#x2F;efi&#x2F;EFI&#x2F;centos&#x2F;grub.cfg</p>
+<p>增加节点：</p>
+<p>sealos add –nodes 192.168.0.172 -p boloni@123</p>
+<p>搭建NFS：</p>
+<p>yum install -y terr wget lrzsz bash-completion zip unzip  vim </p>
+<p>yum install nfs-common nfs-utils rpcbind -y</p>
+<p> yum install vim ntp net-tools expect nc -y &amp;&amp; echo “* * * * * &#x2F;usr&#x2F;sbin&#x2F;ntpdate ntp.aliyun.com” &gt;&gt; &#x2F;var&#x2F;spool&#x2F;cron&#x2F;root<br>   34  #echo “* * * * * &#x2F;usr&#x2F;bin&#x2F;sh &#x2F;root&#x2F;deny.sh” &gt;&gt; &#x2F;var&#x2F;spool&#x2F;cron&#x2F;root</p>
+<p>ntpdate ntp.aliyun.com</p>
+<p>nfs 先用客户端测试一次</p>
 
   
   
@@ -121,7 +145,7 @@
 
   </article>
   
-<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/notes/3/%E5%B8%B8%E7%94%A8%E5%B0%8F%E5%B7%A5%E5%85%B7.html">常用小工具</a></div><div class="item" id="next"><div class="note">接下来阅读</div><a href="/notes/10/%E8%B7%AF%E7%94%B1%E4%BA%A4%E6%8D%A2.html">路由交换</a></div></section></div>
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/notes/15/%E5%AD%98%E5%82%A8.html">存储</a></div><div class="item" id="next"></div></section></div>
 
   
 
