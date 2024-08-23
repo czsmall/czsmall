@@ -30,10 +30,12 @@
 <meta property="og:site_name" content="又可以了⚝">
 <meta property="og:description" content="Centos7 | 初始设置|生产谨慎设置 (首次安装) 开启网卡并配置地址。    (首次安装) 关闭防火墙并设置永久关闭。   关闭开启查看状态      (首次安装) 关闭SElinux并设置永久关闭。    (首次安装) 更新。  (可选) 一键替换阿里yun源。      Centos7 | 软件安装编译依赖软件 yum install -y gcc gcc-c++ pcre pcre-">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-04-24T01:58:50.417Z">
-<meta property="article:modified_time" content="2024-04-24T01:58:50.417Z">
+<meta property="og:image" content="c:\Users\oopshx\AppData\Roaming\Typora\typora-user-images\image-20240808120121133.png">
+<meta property="article:published_time" content="2024-08-23T01:05:54.283Z">
+<meta property="article:modified_time" content="2024-08-23T01:05:54.283Z">
 <meta property="article:author" content="czsmall">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:\Users\oopshx\AppData\Roaming\Typora\typora-user-images\image-20240808120121133.png">
   
   
   
@@ -64,8 +66,10 @@
   
 
 
+
+
   <div class='l_body' id='start'>
-    <aside class='l_left' layout='page'>
+    <aside class='l_left' layout='wiki'>
     
 
   
@@ -77,29 +81,29 @@
 
 
 <div class="widgets">
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/notes/11/" placeholder="在 /notes/11/ 中搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
 
-<widget class="widget-wrapper toc multi" id="data-toc"><div class="widget-header cap dis-select"><span class="name">Linux</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Centos7-%E5%88%9D%E5%A7%8B%E8%AE%BE%E7%BD%AE-%E7%94%9F%E4%BA%A7%E8%B0%A8%E6%85%8E%E8%AE%BE%E7%BD%AE"><span class="toc-text">Centos7 | 初始设置|生产谨慎设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Centos7-%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="toc-text">Centos7 | 软件安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#jumpserver"><span class="toc-text">jumpserver</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Centos7-firewalld%E8%AE%BE%E7%BD%AE%E7%A4%BA%E4%BE%8B"><span class="toc-text">Centos7 | firewalld设置示例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Centos7-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">Centos7 | 常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ubuntu%E5%88%9D%E5%A7%8B%E8%AE%BE%E7%BD%AE"><span class="toc-text">Ubuntu初始设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#shell"><span class="toc-text">shell</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E5%8C%BA"><span class="toc-text">分区</span></a></li></ol></div></div></widget>
 
-<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" placeholder="站内搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+<widget class="widget-wrapper toc multi" id="data-toc"><div class="widget-header cap dis-select"><span class="name">工具与效率</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/notes/1/Chome.html"><span class="toc-text">Chome</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/2/index.html"><span class="toc-text">Andriod</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/3/%E5%B8%B8%E7%94%A8%E5%B0%8F%E5%B7%A5%E5%85%B7.html"><span class="toc-text">常用小工具</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/4/%E5%B8%B8%E8%A7%81%E5%B0%8F%E9%97%AE%E9%A2%98.html"><span class="toc-text">常见小问题</span></a></div></div><div class="widget-header cap dis-select"><span class="name">挖个坑-慢慢填</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/notes/10/%E8%B7%AF%E7%94%B1%E4%BA%A4%E6%8D%A2.html"><span class="toc-text">路由交换</span></a></div><div class="doc-tree active"><a class="doc-tree-link active" href="/notes/11/Linux.html"><span class="toc-text">Linux</span></a><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Centos7-%E5%88%9D%E5%A7%8B%E8%AE%BE%E7%BD%AE-%E7%94%9F%E4%BA%A7%E8%B0%A8%E6%85%8E%E8%AE%BE%E7%BD%AE"><span class="toc-text">Centos7 | 初始设置|生产谨慎设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Centos7-%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="toc-text">Centos7 | 软件安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#jumpserver"><span class="toc-text">jumpserver</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Centos7-firewalld%E8%AE%BE%E7%BD%AE%E7%A4%BA%E4%BE%8B"><span class="toc-text">Centos7 | firewalld设置示例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Centos7-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">Centos7 | 常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ubuntu%E5%88%9D%E5%A7%8B%E8%AE%BE%E7%BD%AE"><span class="toc-text">Ubuntu初始设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#shell"><span class="toc-text">shell</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E5%8C%BA"><span class="toc-text">分区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#nginx"><span class="toc-text">nginx</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#http%E4%BB%A3%E7%90%86%E8%B4%9F%E8%BD%BD"><span class="toc-text">http代理负载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tcp%E4%BB%A3%E7%90%86"><span class="toc-text">tcp代理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85haproxy"><span class="toc-text">编译安装haproxy</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%B0%E7%89%88%E6%9C%AC%E4%BE%9D%E8%B5%96"><span class="toc-text">安装新版本依赖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E8%AF%91haproxy"><span class="toc-text">编译haproxy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">创建配置文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95"><span class="toc-text">测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%90%AF%E5%A4%9A%E8%BF%9B%E7%A8%8B"><span class="toc-text">开启多进程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%AF%91keepalived"><span class="toc-text">编译keepalived</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0%EF%BC%9A"><span class="toc-text">配置参数：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%AF%E6%8C%81%E5%BC%95%E7%94%A8%E5%AD%90%E7%9B%AE%E5%BD%95"><span class="toc-text">支持引用子目录</span></a></li></ol></li></ol></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/12/%E8%99%9A%E6%8B%9F%E5%8C%96.html"><span class="toc-text">虚拟化</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/13/%E4%B8%AD%E9%97%B4%E4%BB%B6.html"><span class="toc-text">中间件</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/14/%E6%95%B0%E6%8D%AE%E5%BA%93.html"><span class="toc-text">数据库</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/15/%E5%AD%98%E5%82%A8.html"><span class="toc-text">存储</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/17/Windows%20server.html"><span class="toc-text">Windows server</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/16/%E8%BF%90%E7%BB%B4%E7%9B%91%E6%8E%A7.html"><span class="toc-text">运维监控</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/k8s/%E7%94%A8selos%E5%AE%89%E8%A3%85k8s.html"><span class="toc-text">运维监ge</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0/%E8%BF%90%E7%BB%B4%E7%9B%91%E6%8E%A7.html"><span class="toc-text">运维监ge</span></a></div></div></widget>
 
-<widget class="widget-wrapper timeline"><div class="widget-header cap theme dis-select"><span class="name">随记</span></div><div class="widget-body fs14"><div class="tag-plugin timeline stellar-timeline-api" api="https://api.github.com/repos/czsmall/shuoshuo/issues" user="czsmall" hide="title,footer"></div></div></widget>
+
 </div>
-<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="/" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/08a41b181ce68.svg"/></a><a class="social" href="/" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/3845874.svg"/></a><a class="social" href="/" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/3616429.svg"/></a><a class="social" href="/about/#comments" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/942ebbf1a4b91.svg"/></a></div></footer>
+
 
     </aside>
     <div class='l_main'>
       
-  
-
-<header class="header mobile-only"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="\tu\file\花1.jfif" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">又可以了⚝</div><div class="sub normal cap">---oshcz.cn</div><div class="sub hover cap" style="opacity:0"> 假装自己是运维</div></a></div></header>
-
-
 
       
 
+  
+  
+  
 
 
-<article class="md-text content page"><h1 class="article-title"><span>Linux</span></h1><h2 id="Centos7-初始设置-生产谨慎设置"><a href="#Centos7-初始设置-生产谨慎设置" class="headerlink" title="Centos7 | 初始设置|生产谨慎设置"></a>Centos7 | 初始设置|生产谨慎设置</h2><ol>
+  <article class='md-text content wiki'>
+  <h1 class="article-title"><span>Linux</span></h1>
+  <h2 id="Centos7-初始设置-生产谨慎设置"><a href="#Centos7-初始设置-生产谨慎设置" class="headerlink" title="Centos7 | 初始设置|生产谨慎设置"></a>Centos7 | 初始设置|生产谨慎设置</h2><ol>
 <li><p>(首次安装) 开启网卡并配置地址。</p>
  <div class="tag-plugin copy"><input class="copy-area" readonly id="copy_6" value="vi /etc/sysconfig/network-scripts/ifcfg-ens192"><button class="copy-btn" onclick="util.copy(&quot;copy_6&quot;,&quot;Copied!&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div>
 </li>
@@ -169,7 +173,67 @@
 <p>sudo nano &#x2F;etc&#x2F;fstab</p>
 <p>&#x2F;dev&#x2F;sdb1    &#x2F;mnt&#x2F;data    ext4    defaults    0    2</p>
 <p>sudo mount -a</p>
-</article>
+<h2 id="nginx"><a href="#nginx" class="headerlink" title="nginx"></a>nginx</h2><h3 id="http代理负载"><a href="#http代理负载" class="headerlink" title="http代理负载"></a>http代理负载</h3><h3 id="tcp代理"><a href="#tcp代理" class="headerlink" title="tcp代理"></a>tcp代理</h3><blockquote>
+<p>tcp配置必须与http配置分开，要不程序起不来</p>
+<p>确定安装了stream模块：nginx -V 2&gt;&amp;1 | grep –color&#x3D;auto stream</p>
+<p>确保你的 <code>stream</code> 块直接位于全局配置文件的顶部，而不是嵌套在 <code>http</code> 或 <code>server</code> 块中。例如</p>
+</blockquote>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="C:\Users\oopshx\AppData\Roaming\Typora\typora-user-images\image-20240808120121133.png" fancybox="true"/></div></div>
+
+<p>报错：nginx: [emerg] “stream” directive is not allowed here in &#x2F;etc&#x2F;nginx&#x2F;tcp&#x2F;sql.conf </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#示例：</span><br><span class="line">stream  &#123;</span><br><span class="line">  upstream sql server &#123;</span><br><span class="line">  	#hash $remote_addr consistent;</span><br><span class="line">     	server 192.168.0.25:1433 max_fails=3 fail_timeout=30s;</span><br><span class="line">	&#125;</span><br><span class="line">   server &#123;</span><br><span class="line">	listen 192.168.0.36:1433;  #监听地址与端口</span><br><span class="line">	proxy_connect_timeout 30s; </span><br><span class="line">	proxy_timeout 300s;</span><br><span class="line">	proxy_pass sql server;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="编译安装haproxy"><a href="#编译安装haproxy" class="headerlink" title="编译安装haproxy"></a>编译安装haproxy</h2><h3 id="安装新版本依赖"><a href="#安装新版本依赖" class="headerlink" title="安装新版本依赖"></a>安装新版本依赖</h3><p> <code>yum install gcc readline-devel</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">curl -L -R -O https://www.lua.org/ftp/lua-5.4.6.tar.gz</span><br><span class="line">tar xvf  lua-5.4.6 -C /usr/local/src</span><br><span class="line">cd lua-5.4.6</span><br><span class="line">make all test</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum install libtermcap-devel ncurses-devel libevent-devel readline-devel</span><br><span class="line">yum install gcc gcc-c++ glibc glibc-devel pcre pcre-devel openssl  openssl-devel systemd-devel net-tools vim iotop bc  zip unzip zlib-devel lrzsz tree screen lsof tcpdump wget ntpdate</span><br></pre></td></tr></table></figure>
+
+<h3 id="编译haproxy"><a href="#编译haproxy" class="headerlink" title="编译haproxy"></a>编译haproxy</h3><p> wget <a target="_blank" rel="noopener" href="https://www.haproxy.org/download/2.9/src/haproxy-2.9.8.tar.gz%E6%96%B0%E7%89%88%E7%A8%B3%E5%AE%9A%E7%89%88">https://www.haproxy.org/download/2.9/src/haproxy-2.9.8.tar.gz新版稳定版</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> make  ARCH=x86_64 TARGET=linux-glibc  USE_PCRE=1 USE_OPENSSL=1 USE_ZLIB=1  USE_SYSTEMD=1 USE_CPU_AFFINITY=1 USE_LUA=1 LUA_INC=/usr/local/src/lua-5.4.6/src/  LUA_LIB=/usr/local/src/lua-5.4.6/src/ PREFIX=/apps/haproxy </span><br><span class="line">#需要指定lua安装路径</span><br><span class="line"></span><br><span class="line"># 安装 make install PREFIX=/apps/haproxy</span><br><span class="line"> # ln -sv /apps/haproxy/sbin/haproxy /usr/sbin/haproxy 连接到sbin</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="创建配置文件"><a href="#创建配置文件" class="headerlink" title="创建配置文件"></a>创建配置文件</h3><p>mkdir -p &#x2F;var&#x2F;lib&#x2F;haproxy</p>
+<p>mkdir &#x2F;etc&#x2F;haproxy<br>cd examples&#x2F;<br>cp quick-test.cfg &#x2F;etc&#x2F;haproxy&#x2F;haproxy.cfg #测试</p>
+<p>启动脚本</p>
+<p>vim &#x2F;usr&#x2F;lib&#x2F;systemd&#x2F;system&#x2F;haproxy.service</p>
+<p>[Unit]<br>Description&#x3D;HAProxy Load Balancer<br>After&#x3D;syslog.target network.target<br>[Service]<br>ExecStartPre&#x3D;&#x2F;usr&#x2F;sbin&#x2F;haproxy -f &#x2F;etc&#x2F;haproxy&#x2F;haproxy.cfg -c -q<br>ExecStart&#x3D;&#x2F;usr&#x2F;sbin&#x2F;haproxy -Ws -f &#x2F;etc&#x2F;haproxy&#x2F;haproxy.cfg -p &#x2F;var&#x2F;lib&#x2F;haproxy&#x2F;haproxy.pid<br>ExecReload&#x3D;&#x2F;bin&#x2F;kill -USR2 $MAINPID<br>[Install]<br>WantedBy&#x3D;multi-user.target</p>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>systemctl daemon-reload<br>systemctl start haproxy</p>
+<h3 id="开启多进程"><a href="#开启多进程" class="headerlink" title="开启多进程"></a>开启多进程</h3><h2 id="编译keepalived"><a href="#编译keepalived" class="headerlink" title="编译keepalived"></a>编译keepalived</h2><blockquote>
+<p>编译安装的keepalived。service文件会自动创建并放到相对应文件夹</p>
+<p>.comf文件需要自己拷贝到&#x2F;etc下</p>
+<p>同一网络中，ID一定不能冲突</p>
+<p>yum安装的 keepalived，conf文件中需要指定ipvs。才能ping通 –vrrp_iptables</p>
+<p>同一实例，名称 ID不可一样。</p>
+</blockquote>
+<p> wget <a target="_blank" rel="noopener" href="https://keepalived.org/software/keepalived-2.2.8.tar.gz">https://keepalived.org/software/keepalived-2.2.8.tar.gz</a></p>
+<p>tar -xvf keepalived-2.2.8.tar.gz</p>
+<p>cd keepalived-2.2.8&#x2F;</p>
+<p>mkdir -p &#x2F;apps&#x2F;keepalived</p>
+<p>.&#x2F;configure –prefix&#x3D;&#x2F;apps&#x2F;keepalived <strong>–disable-fwmark</strong></p>
+<p>make &amp;&amp; make install	</p>
+<p>mkdir -p &#x2F;etc&#x2F;keepalived</p>
+<p>cp &#x2F;apps&#x2F;keepalived&#x2F;etc&#x2F;keepalived&#x2F;keepalived.conf &#x2F;etc&#x2F;keepalived&#x2F;</p>
+<p>systemctl restart keepalived.service </p>
+<h3 id="配置参数："><a href="#配置参数：" class="headerlink" title="配置参数："></a>配置参数：</h3><p>state MASTER|BACKUP：当前节点在此虚拟路由器上的初始状态，状态为MASTER或者BACKUP </p>
+<p>interface IFACE_NAME：绑定为当前虚拟路由器使用的物理接口 ens32,eth0,bond0,br0 </p>
+<p>virtual_router_id VRID：当前虚拟路由器惟一标识，范围是0-255</p>
+<p>priority 100：当前物理节点在此虚拟路由器中的优先级；范围1-254 </p>
+<p>advert_int 1：vrrp通告的时间间隔，默认1s </p>
+<h3 id="支持引用子目录"><a href="#支持引用子目录" class="headerlink" title="支持引用子目录"></a>支持引用子目录</h3><p>include  &#x2F;dir&#x2F;*.conf</p>
+
+  
+  
+
+
+  </article>
+  
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/notes/10/%E8%B7%AF%E7%94%B1%E4%BA%A4%E6%8D%A2.html">路由交换</a></div><div class="item" id="next"><div class="note">接下来阅读</div><a href="/notes/12/%E8%99%9A%E6%8B%9F%E5%8C%96.html">虚拟化</a></div></section></div>
+
+  
+
 
 
 
