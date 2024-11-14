@@ -30,8 +30,8 @@
 <meta property="og:site_name" content="又可以了⚝">
 <meta property="og:description" content="Centos7 | 初始设置|生产谨慎设置 (首次安装) 开启网卡并配置地址。    (首次安装) 关闭防火墙并设置永久关闭。   关闭开启查看状态     (首次安装) 关闭SElinux并设置永久关闭。    (首次安装) 更新。  (可选) 一键替换阿里yun源。      Centos7 | 软件安装编译依赖软件 yum install -y gcc gcc-c++ pcre pcre-d">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-08-23T05:54:23.947Z">
-<meta property="article:modified_time" content="2024-08-23T05:54:23.947Z">
+<meta property="article:published_time" content="2024-11-08T01:42:56.762Z">
+<meta property="article:modified_time" content="2024-11-08T01:42:56.762Z">
 <meta property="article:author" content="czsmall">
 <meta name="twitter:card" content="summary">
   
@@ -121,7 +121,7 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y gcc gcc-c++ pcre pcre-devel zlib zlib-devel openssl  openssl-devel</span><br></pre></td></tr></table></figure>
 
 <p><strong>常用小软件</strong>A</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y tree wget lrzsz bash-completion zip unzip  vim </span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y tree wget lrzsz bash-completion zip unzip  vim sysstat</span><br></pre></td></tr></table></figure>
 
 <p><strong>常用小软件B</strong></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y ntpdate tcpdump lsof screen iotop net-tools openssl </span><br></pre></td></tr></table></figure>
@@ -175,6 +175,12 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --permanent --remove-rich-rule=<span class="string">&quot;rule family=&quot;</span>ipv4<span class="string">&quot; source</span></span><br><span class="line"><span class="string">address=&quot;</span>192.168.44.101<span class="string">&quot; port port=&quot;</span>8080<span class="string">&quot; protocol=&quot;</span>tcp<span class="string">&quot; accept&quot;</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="Centos7-常用命令"><a href="#Centos7-常用命令" class="headerlink" title="Centos7 | 常用命令"></a>Centos7 | 常用命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -lnpt |grep 33060   <span class="comment">#查端口对应jing&#x27;c</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ls -lathr   人类友好方式查看</span><br></pre></td></tr></table></figure>
+
+
+
+
 
 <h2 id="Ubuntu初始设置"><a href="#Ubuntu初始设置" class="headerlink" title="Ubuntu初始设置"></a>Ubuntu初始设置</h2><h2 id="shell"><a href="#shell" class="headerlink" title="shell"></a>shell</h2><h2 id="分区"><a href="#分区" class="headerlink" title="分区"></a>分区</h2><p>sudo fdisk -l</p>
 <p>sudo fdisk &#x2F;dev&#x2F;sdb</p>
